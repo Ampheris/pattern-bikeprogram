@@ -21,10 +21,10 @@ services:
         links:
             - server:backend
     frontend:
-        image: frontend
+        image: richpotato/frontend:latest
         container_name: "frontend"
         ports:
-            - "1337:1337"
+            - "1339:1339"
         networks:
             dbwebb:
         # ska den länkas?
@@ -36,3 +36,5 @@ services:
 #docker-compose up -d server
 #docker-compose up -d frontend
 #docker-compose run bikeprogram
+#docker-compose stop server
+#docker-compose stop frontend
